@@ -1,0 +1,135 @@
+.slider__list {
+    .reset-list();
+    position: relative;
+    min-height: 240px;
+    width: 320px;
+    margin: 0 auto;
+    margin-bottom: 33px;
+    
+}
+
+.slider__item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider__image {
+    display: block;
+    margin: 0 auto;
+}
+
+#first:checked ~ .slider__list .slider__item--first,
+#second:checked ~ .slider__list .slider__item--second {
+    display: block;
+}
+
+#first:checked ~ .slider__toggles .slider__bar::before {
+    left: 7px;
+}
+
+#second:checked ~ .slider__toggles .slider__bar::before {
+    left: 50%;
+}
+
+.slider__toggles {
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__bar {
+    position: relative;
+    width: 84px;
+    height: 14px;
+    border: 1px solid #cdcdcd;
+    border-radius: 7px;
+    background-color: #ffffff;
+       &::before {
+           position: absolute;
+           content: "";
+           width: 35px;
+           height: 6px;
+           top: 4px;
+           left: 7px;
+           background-color: #68b738;
+           border-radius: 2px;
+       }
+}
+
+.slider__label {
+    font-family: "OswaldRegular", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+    .slider__list {
+        width: 677px;
+        min-height: 499px;
+        margin-bottom: 25px;
+    }
+
+    .slider__image {
+       width: 677px;
+       height: 499px;
+    }
+
+    .slider__toggles {
+        width: 570px;
+    }
+
+    .slider__label {
+        font-size: 20px;
+        line-height: 30px;
+        border-bottom: 2px dotted #dcdcdc;
+            &:hover {
+                border-bottom-style: solid;
+                border-bottom-color: #989898;
+            }
+            &:active {
+                border: none;
+            }
+    }
+
+    .slider__bar {
+        width: 428px;
+        height: 6px;
+        border: none;
+        background-color: #dcdcdc;
+           &::before {
+               width: 8px;
+               height: 8px;
+               top: -14px;
+               border-radius: 50%;
+               border: 13px solid #ffffff;
+               box-shadow: 0 0 10px 0 #000000;
+               cursor: pointer;
+            }
+            &:hover {
+                &:before {
+                    box-shadow: 0 0 14px 0 #68b738;
+                }
+            }
+    }
+
+    #first:checked ~ .slider__toggles .slider__bar::before {
+        left: 0;
+    }
+
+    #second:checked ~ .slider__toggles .slider__bar::before {
+        left: 94%;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .slider__list {
+        margin-bottom: 50px;
+    }
+}

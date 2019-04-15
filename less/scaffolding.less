@@ -1,0 +1,79 @@
+@font-face {
+    font-weight: normal;
+    font-family: 'OswaldRegular';
+    font-style: normal;
+    src: url('../fonts/OswaldRegular.woff2') format('woff2'),
+         url('../fonts/OswaldRegular.woff') format('woff');
+         
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-style: normal;
+    color: #444444;
+
+    background-color: #ffffff;
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: no-wrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 87%;
+    margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+    .wrapper {
+        width: 92%;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .wrapper {
+        width: 1220px;
+    }
+}
+
+
+.fieldset-wrapper {
+    width: 87%;
+    margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+    .fieldset-wrapper {
+        width: 82%;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .fieldset-wrapper {
+        width: 100%;
+    }
+}
+

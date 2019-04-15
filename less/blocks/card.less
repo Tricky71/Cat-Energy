@@ -1,0 +1,225 @@
+.card {
+    padding-bottom: 24px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-items: center;
+        &--more {
+            // flex-direction: column;
+            padding-top: 25px;
+        }
+       
+}
+
+.card__inner {
+    width: 87%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+        &--more {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+}
+
+.card__image {
+    width: 50%;
+}
+
+.card__info {
+    width: 50%;
+      &--more {
+          width: 100%;
+      }
+}
+
+.card__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    // width: 80px;
+    font-family: "OswaldRegular", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+       &--more {
+        //    width: 100%;
+           margin-bottom: 8px;
+           text-align: center;
+       }
+}
+
+.card__description {
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    border-collapse: collapse;
+       &--more {
+        //    width: 100%;
+           margin: 0;
+           padding: 0;
+           margin-bottom: 23px;
+           text-align: center;
+       }
+}
+
+.card__description td:last-child {
+    text-align: right;
+}
+
+.card__img {
+    display: block;
+    margin: 0 auto;
+}
+
+.card__icon-more {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 24px;
+        &::before {
+            content: "";
+            position: absolute;
+            // width: 30px;
+            height: 2px;
+            background-color: #d3d3d3;
+            top: 14px;
+            left: 0;
+            right: 0;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            // width: 30px;
+            height: 2px;
+            background-color: #d3d3d3;
+            top: 14px;
+            left: 0px;
+            right: 0;
+            transform: rotate(90deg);
+        }
+}
+
+.card__button {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+    .card {
+        padding-bottom: 40px;
+            &--more {
+                padding-top: 55px;
+                background-color: #fff;
+                border: 1px solid #e6e6e6;
+            }
+        }
+    
+    .card__inner {
+        display: block;
+        // flex-direction: column;
+        // align-items: flex-start;
+        width: 77%;
+        &--more {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .card__image {
+        position: relative;
+        width: 324px;
+        height: 126px;
+        margin-bottom: 36px;
+        // overflow: visible;
+        // margin-top: -46px;
+        // display: flex;
+    }
+
+    .card__img {
+        position: absolute;
+        width: 324px;
+        height: auto;
+        bottom: 0;
+        left: -38px;
+       
+
+    }
+
+    .card__icon-more {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 50px;
+           &::before,
+           &::after {
+               top: 29px;
+           }
+    }
+
+    .card__info {
+        width: 100%;
+        margin-bottom: 36px;
+        
+    }
+
+    .card__title {
+        width: 150px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .card__description {
+        font-size: 16px;
+        line-height: 20px;
+            &--more {
+               margin-bottom: 48px;
+            }
+    }
+
+    .card__description tr {
+        border-bottom: 1px solid #cdcdcd;
+    }
+
+    .card__description td {
+        padding: 5px 0;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .card__inner {
+        width: 69%;
+    }
+
+    .card__image {
+        width: 245px;
+        height: 126px;
+    }
+
+    .card__img {
+        width: 245px;
+        
+    }
+
+    .card__info {
+        margin-bottom: 33px;
+    }
+
+    .card__title {
+        margin-bottom: 20px;
+    }
+}

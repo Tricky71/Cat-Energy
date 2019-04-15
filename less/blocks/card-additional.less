@@ -1,0 +1,108 @@
+.card-additional {
+    padding-top: 12px;
+    padding-bottom: 17px;
+    margin-top: -1px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.card-additional__info {
+    width: 100%;
+    margin-bottom: 12px;;
+    border-collapse: collapse;
+}
+
+.card-additional__info tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-additional__title {
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: "OswaldRegular","Arial", sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.card-additional__button {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+    .card-additional {
+        padding-top: 22px;
+        padding-bottom: 27px;
+        border: 1px solid #d9d9d9;
+    }
+
+    .card-additional__wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card-additional__info tr {
+        align-items: baseline;
+    }
+
+    .card-additional__title {
+        width: 50%;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .card-additional__quantity,
+    .card-additional__price {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .card-additional {
+        padding: 15px 0;
+        border: none;
+        border-top: 1px solid #d9d9d9;
+          &:last-child {
+                border-bottom: 1px solid #d9d9d9;
+          }
+    }
+
+    .card-additional__wrapper {
+        width: 100%;
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .card-additional__info {
+        width: 600px;
+    }
+
+    .card-additional__info tr {
+        align-items: center;
+    }
+
+    .card-additional__title {
+        width: 245px;
+        margin-bottom: 0;
+        line-height: 20px;
+    }
+
+    .card-additional__quantity {
+        width: 150px;
+        text-align: left;
+    }
+   
+    .card-additional__button {
+        width: 245px;
+    }
+}
